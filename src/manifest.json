@@ -3,8 +3,7 @@
   "short_name": "30 SoK",
   "manifest_version": 2,
   "version": "1.0.0",
-  "version_name": "1.0.0",
-  "description": "Google Chrome Extension that lets you gain new developer skills, every time you open a New Tab",
+  "description": "Firefox Extension that lets you gain new developer skills, every time you open a New Tab",
   "icons": {
     "32": "icon_32.png",
     "64": "icon_64.png",
@@ -19,13 +18,20 @@
     "default_popup": "popup.html",
     "default_icon": "icon_32.png"
   },
-  "options_page": "options.html",
   "background": {
     "page": "background.html"
   },
   "chrome_url_overrides" : {
     "newtab": "newtab.html"
   },
-  "offline_enabled": true,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "nani@example.com",
+      "strict_min_version": "42.0"
+    }
+  },
+  "options_ui": {
+    "page":"options.html"
+  },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
